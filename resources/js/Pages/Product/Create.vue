@@ -55,12 +55,15 @@ export default {
                 price: 0,
                 description: '',
                 category_id: ''
+                // Missing image
             }),
             message: ''
         }
     },
     methods: {
         createProduct() {
+            // its much better to use form's helper method to post a form.
+            // for ex.: this.form.post(route('products.store'))
             this.$inertia.post(route('products.store'), this.form, {
                 onSuccess: () => {
                     this.form.reset();

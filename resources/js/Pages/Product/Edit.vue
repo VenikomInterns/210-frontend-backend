@@ -37,15 +37,18 @@ export default {
     },
     data() {
         return {
+            //why not: form: this.$inertia.form({...this.product})
             form: this.$inertia.form({
                 name: this.product.name,
                 price: this.product.price,
                 description: this.product.description
+                //missing category id
             })
         }
     },
     methods: {
         editProduct() {
+            //same about this.form.put()...
             this.$inertia.put(route('products.update', this.product), this.form,{
                 onSuccess: () => {
                     this.form.reset();

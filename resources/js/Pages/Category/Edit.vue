@@ -34,11 +34,11 @@ export default {
     data() {
         return {
             form: this.$inertia.form({
-                name: ''
+                name: '' //we should have category's name as initally here
             })
         }
     },
-}
+}   //missing methods for submitting a form
 </script>
 
 <style scoped>

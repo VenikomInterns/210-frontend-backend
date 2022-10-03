@@ -35,6 +35,8 @@ export default {
     },
     methods: {
         createCategory() {
+            // its much better to use form helper method, for ex.:
+            //  this.form.post(route('categories.store'), {.... etc})
             this.$inertia.post(route('categories.store'), this.form,{
                 onSuccess: () => {
                     this.form.reset();

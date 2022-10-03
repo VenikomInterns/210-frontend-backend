@@ -13,10 +13,10 @@ class ProductApiController extends Controller
     {
        $products = Product::query()->paginate(10);
        return JsonResource::collection($products);
-    }
+    } // excellent
 
     public function show(Product $product): JsonResource
     {
         return JsonResource::make($product);
-    }
+    } // excellent
 }

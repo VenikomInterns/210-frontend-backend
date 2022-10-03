@@ -2,8 +2,9 @@
     <section>
         <div class="container">
             <div class="row">
+                <!---This will output raw json -->
                 <div class="col text-center">
-                    {{ category }}
+                    {{ category }} 
                 </div>
             </div>
         </div>
@@ -14,7 +15,7 @@
 export default {
     name: "Index",
     props: {
-        category: Array
+        category: Array // category but array?
     }
 }
 </script>

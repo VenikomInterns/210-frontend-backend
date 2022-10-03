@@ -15,26 +15,26 @@ class ProductsController extends Controller
     {
         $products = Product::query()->simplePaginate(10);
         return Inertia::render('Product/Index', compact('products'));
-    }
+    } //excellent
 
     public function show(Product $product): Response
     {
         return Inertia::render('Product/Show', compact('product'));
-    }
+    }//excellent
 
     public function create(): Response
     {
         $categories = Category::all();
         return Inertia::render('Product/Create', compact('categories'));
-    }
+    } //excellent
 
     public function store(Request $request): RedirectResponse
     {
         $validated = $request->validate([
             'name' => ['required'],
-            'price' => ['required'],
+            'price' => ['required'], // what if users sends non integer?
             'description' => ['required'],
-            'category_id' => ['required'],
+            'category_id' => ['required'], //what if user sends us non integer or non existing category?
         ]);
 
         Product::query()->create($validated);
@@ -50,7 +50,7 @@ class ProductsController extends Controller
     {
         $validated = $request->validate([
             'name' => ['required'],
-            'price' => ['required'],
+            'price' => ['required'], // what if users sends non integer?
             'description' => ['required'],
         ]);
 

@@ -22,7 +22,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr v-for="product in products.data">
+                        <tr v-for="product in products.data"> <!---missing :key="" attribute-->
                             <td>
                                 {{ product.id }}
                             </td>

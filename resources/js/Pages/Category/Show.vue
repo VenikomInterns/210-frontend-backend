@@ -3,6 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
+                    <!---This will output raw json -->
                     <h1 class="text-center">{{ category }}</h1>
                 </div>
             </div>
